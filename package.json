@@ -1,0 +1,36 @@
+{
+  "name": "fp-validation",
+  "description": "",
+  "version": "1.0.0",
+  "author": {
+    "name": "addhome2001",
+    "url": "https://github.com/addhome2001"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/addhome2001/fp-validation.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.2.2"
+  },
+  "keywords": [
+    "validation",
+    "functional",
+    "fp",
+    "compose"
+  ],
+  "scripts": {
+    "test:watch": "nodemon test | tap-spec",
+    "test": "node test | tap-spec"
+  },
+  "dependencies": {
+    "lodash.compose": "^2.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  }
+}
