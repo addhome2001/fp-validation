@@ -52,7 +52,7 @@ module.exports = {
     return parseFloat(val) <= max;
   }, "內容超過限制大小"),
 
-  composeVail: function() {
+  validate: function() {
     const args = arguments;
     return function(x) {
       return filter(compose.apply(this, args)({ reason: null, val: x }))
