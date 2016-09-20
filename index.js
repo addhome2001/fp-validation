@@ -3,12 +3,12 @@ const compose = require("lodash.compose");
 const format = function(condition) {
   return function() {
     const args = Array.prototype.splice.call(arguments, 0);
-    const length = args.length;
+    const singleArgu = args.length <= 1;
     const head = args[0];
-    const msg = length <= 1 ? (typeof head === 'string' && head) || "" : args.pop();
+    const msg = singleArgu ? (typeof head === 'string' && head) || "" : args.pop();
     return function(source) {
       if (!source.reason) {
-        const cond = typeof head === 'string' ? [source.val] : args.concat(source.val);
+        const cond = args.concat(source.val);
         const result = condition.apply(this, cond);
         return result.con ?
         { reason: null, val: source.val } :
