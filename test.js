@@ -1,19 +1,30 @@
 'use strict';
 
-var tape = require('tape');
-var vail = require('./');
+const tape = require('tape');
+const vail = require('./dist');
 
-tape('compose vail', (assert) => {
-  var v = vail.validate(vail.maxLength(10), vail.maxNum(100, '超過了'), vail.isNumber(), vail.isRequired());
-  var result = v(120);
+const lib = vail.lib;
+const validate = vail.default;
 
-  console.log(result);
+tape('isRequired', t => {
+  const v = validate(lib.isRequired());
+  const msg = "Custom Message";
+  const vCostom = validate(lib.isRequired(msg));
+  t.is(v(""), "欄位為必填", 'Must return default reason');
+  t.is(vCostom(""), msg, 'Must return custom reason');
 
-  // assert.deepEqual(
-  //     gen.next(),
-  //     { done: true, value: undefined },
-  //     'Must return a finish object'
-  // );
+  t.false(v("Text"), "Should pass if value is not Empty");
+  t.end();
+});
 
-  assert.end();
+tape('isNumber', t => {
+  const v = validate(lib.isNumber());
+  const msg = "Custom Message";
+  const vCostom = validate(lib.isRequired(msg));
+  t.is(v(""), "輸入內容必須為數字", 'Must return default reason');
+  t.is(vCostom(""), msg, 'Must return custom reason');
+
+  t.ok(v("Text"), 'Must return reason when not a number');
+  t.false(v(1), "Should pass if value is not Empty")
+  t.end();
 });
