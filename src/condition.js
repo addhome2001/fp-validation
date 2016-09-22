@@ -1,4 +1,4 @@
-import format from '../utils/format';
+import format from './utils/format';
 
 export const isRequired = format(function(val) {
   return {

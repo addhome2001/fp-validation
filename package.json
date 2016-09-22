@@ -2,7 +2,7 @@
   "name": "fp-validation",
   "description": "",
   "version": "1.0.0",
-  "main": "./dist/index.js",
+  "main": "./lib/index.js",
   "author": {
     "name": "addhome2001",
     "url": "https://github.com/addhome2001"
@@ -24,8 +24,8 @@
   "scripts": {
     "test:watch": "nodemon test | tap-spec",
     "test": "node test | tap-spec",
-    "compile": "npm run clear && babel -d dist/ src/",
-    "clear": "del ./dist"
+    "compile": "npm run clear && babel -d lib/ src/",
+    "clear": "del ./lib"
   },
   "dependencies": {
     "lodash.compose": "^2.4.1"

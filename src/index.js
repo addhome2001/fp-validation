@@ -1,6 +1,6 @@
 import compose from "lodash.compose";
 import filter from './filter';
-import * as lib from './lib/condition';
+import * as lib from './condition';
 
 export default function() {
   const args = arguments;
