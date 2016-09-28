@@ -1,6 +1,6 @@
 {
   "name": "fp-validation",
-  "description": "",
+  "description": "A FP style validation library",
   "version": "1.0.0",
   "main": "./lib/index.js",
   "author": {
@@ -10,22 +10,29 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/addhome2001/fp-validation.git"
+    "url": "git:https://github.com/addhome2001/fp-validation.git"
   },
+  "bugs": {
+    "url": "https://github.com/addhome2001/fp-validation.git"
+  },
+  "homepage": "https://github.com/addhome2001/fp-validation.git",
   "engines": {
-    "node": ">=4.2.2"
+    "node": ">=4.4.7",
+    "npm": ">=2.15"
   },
   "keywords": [
     "validation",
     "functional",
     "fp",
-    "compose"
+    "compose",
+    "vali"
   ],
   "scripts": {
     "test:watch": "nodemon test | tap-spec",
     "test": "node test | tap-spec",
     "compile": "npm run clear && babel -d lib/ src/",
-    "clear": "del ./lib"
+    "clear": "del ./lib",
+    "prepublish": "npm run compile"
   },
   "dependencies": {
     "lodash.compose": "^2.4.1"
