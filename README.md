@@ -23,7 +23,6 @@ ___Require fp-validation___
 ```js
 import vailCompose from 'fp-validation';
 import { isNumber, isRequired } from 'fp-validation/libs';
-
 ```
 
 ___You can get pass a single lib as parameter:___
@@ -32,7 +31,6 @@ ___You can get pass a single lib as parameter:___
 const isNum = vailCompose(isNumber("Is not a Number"));
 vail('foo'); // => "Is not a Number"
 vail(123); // => false
-
 ```
 
 ___You can also pass multiple libs as parameters:___
@@ -54,7 +52,7 @@ isNumIsReq(123) // => false
 
 Type: `function`
 
-
+___Coming soon...___
 
 LICENSE
 =======
