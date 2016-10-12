@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git:https://github.com/addhome2001/fp-validation.git"
+    "url": "git://github.com/addhome2001/fp-validation.git"
   },
   "bugs": {
     "url": "https://github.com/addhome2001/fp-validation.git"
