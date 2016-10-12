@@ -52,7 +52,33 @@ isNumIsReq(123) // => false
 
 Type: `function`
 
-___Coming soon...___
+Return: If all the validation of the libs are true will be `false` otherwise is `string`(reason).
+
+The libs you want to compose.
+
+### libs
+
+#### isRequired([reason]) ####
+
+    Default: 欄位為必填
+
+#### isNumber([reason]) ####
+
+    Default: 輸入內容必須為數字
+
+#### isEmail([reason]) ####
+
+    Default: 電子信箱格式不正確
+
+#### maxLength(length, [reason]) ####
+    Default: 超過最大限制長度`length`字元
+
+#### minLength(length, [reason]) ####
+    Default: 小於最小限制長度`length`字元
+
+#### maxNum(max, [reason]) ####
+    Default: 數值超過`max`
+
 
 LICENSE
 =======
