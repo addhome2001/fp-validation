@@ -31,19 +31,23 @@
     "test:watch": "nodemon test | tap-spec",
     "test": "node test | tap-spec",
     "compile": "npm run clear && babel -d lib/ src/",
+    "lint": "./node_modules/.bin/eslint src --ignore-path .gitignore",
     "clear": "del ./lib",
     "prepublish": "npm run compile"
   },
   "dependencies": {
-    "lodash.compose": "^2.4.1"
+    "lodash.compose": "2.4.1",
+    "eslint": "3.12.0",
+    "eslint-config-airbnb-base": "10.0.1",
+    "eslint-plugin-import": "2.2.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.11.4",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-stage-0": "^6.5.0",
-    "del-cli": "^0.2.0",
-    "nodemon": "^1.10.2",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.6.0"
+    "babel-cli": "6.11.4",
+    "babel-preset-es2015": "6.13.2",
+    "babel-preset-stage-0": "6.5.0",
+    "del-cli": "0.2.0",
+    "nodemon": "1.10.2",
+    "tap-spec": "4.1.1",
+    "tape": "4.6.0"
   }
 }
