@@ -6,8 +6,8 @@ export default function (condition) {
     return function ({ reason, val }) {
       if (reason === null) {
         const cond = singleArgu && msg ? [val] : args.concat(val);
-        const { con, msg: resultMsg } = condition.apply(this, cond);
-        return con ? { reason: null, val } : { reason: msg || resultMsg, val: '' };
+        const result = condition.apply(this, cond);
+        return result.con ? { reason: null, val } : { reason: msg || result.msg, val: '' };
       }
       return { reason };
     };
