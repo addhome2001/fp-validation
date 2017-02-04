@@ -1,1 +1,1 @@
-module.exports = require('./lib/condition.js')
+module.exports = require('./lib/condition.js');

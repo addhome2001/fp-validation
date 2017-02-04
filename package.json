@@ -1,7 +1,7 @@
 {
   "name": "fp-validation",
   "description": "A FP style validation library",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./lib/index.js",
   "author": {
     "name": "addhome2001",
@@ -31,7 +31,7 @@
     "test:watch": "nodemon test | tap-spec",
     "test": "node test | tap-spec",
     "compile": "npm run clear && babel -d lib/ src/",
-    "lint": "./node_modules/.bin/eslint src ./test.js --ignore-path .gitignore",
+    "lint": "./node_modules/.bin/eslint .",
     "clear": "del ./lib",
     "prepublish": "npm run compile"
   },
