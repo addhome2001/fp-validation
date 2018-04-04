@@ -1,0 +1,12 @@
+test.js
+
+.eslintignore
+.eslintrc
+.travis.yml
+.snyk
+.babelrc
+
+README.md
+
+yarn.lock
+package-lock.json
