@@ -1,7 +1,7 @@
 {
   "name": "fp-validation",
   "description": "A FP style validation library",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "main": "./lib/index.js",
   "author": {
     "name": "addhome2001",
